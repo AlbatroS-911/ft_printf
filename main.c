@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	int num = -85441;
+	int num = -10;
 	char n = 'p';
 	char *str = "This is new string";
 	int i = ft_printf("unsign int: %u\n", num);

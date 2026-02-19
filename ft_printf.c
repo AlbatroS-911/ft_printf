@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 09:33:20 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/18 21:06:50 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/19 07:39:30 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ int	ft_printf(const char *format, ...)
 				count = count + ft_strlen(str);
 			}
 			else if (format[i] == 'p')
-				ft_print_add(va_arg(p_arg, unsigned long));
+				ft_print_add(va_arg(p_arg,unsigned long));
 			else if (format[i] == 'x')
 				ft_putnbr_base(va_arg(p_arg, unsigned int), "0123456789abcdef");
 			else if (format[i] == 'X')

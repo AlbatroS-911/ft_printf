@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 09:57:24 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/18 11:17:11 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/19 09:02:40 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,10 @@ int	operation(long int number, char *base)
 		number *= -1;
 		x++;
 	}
-	if (number < len_base)
-	{
-		ft_putchar_fd(base[number], 1);
-		x++;
-	}
-	else
-	{
-	 	operation(number / len_base, base);
-		ft_putchar_fd(base[number % len_base], 1);
-	}
-	return (x);
+	if (number >= len_base)
+		x += operation(number / len_base, base);
+	ft_putchar_fd(base[number % len_base], 1);
+	return (x + 1);
 }
 
 int	ft_putnbr_base(long nbr, char *base)
@@ -67,7 +60,6 @@ int	ft_putnbr_base(long nbr, char *base)
 	base_check = base_validation(base);
 	if(!base_check || !base)
 		return (0);
-	else
-		x = operation(nbr, base);
+	x = operation(nbr, base);
 	return (x);
 }
