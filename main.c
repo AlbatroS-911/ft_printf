@@ -1,16 +1,21 @@
 #include "stdio.h"
 #include "ft_printf.h"
 
+
 int main(void)
 {
-	int num = -10;
+	int num = -85212;
 	char n = 'p';
 	char *str = "This is new string";
-	int i = ft_printf("unsign int: %u\n", num);
-	int j = printf("unsign int: %u\n", num);
+
+	ft_printf("\n");
+
+	int j = printf("unsign int: %x\n", num);
+	int i = ft_printf("unsign int: %x\n", num);
 	
+	ft_printf("\n");
 	printf("Original:------\n");
-	printf("Integer: %d\n", num);
+	printf("Integer: %i\n", num);
 	printf("Address: %p\n", &num);
 	printf("hexa: %x\n", num);
 	printf("HEXA: %X\n", num);
@@ -24,7 +29,7 @@ int main(void)
 	ft_printf("\n");
 
 	ft_printf("Fake:------\n");
-	ft_printf("Integer: %d\n", num);
+	ft_printf("Integer: %i\n", num);
 	ft_printf("Address: %p\n", &num);
 	ft_printf("hexa: %x\n", num);
 	ft_printf("HEXA: %X\n", num);

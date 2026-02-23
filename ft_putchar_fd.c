@@ -6,13 +6,14 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 01:03:39 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/18 06:42:29 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/23 19:24:16 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
+	return (1);
 }

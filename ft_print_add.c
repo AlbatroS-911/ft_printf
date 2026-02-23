@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 10:27:39 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/19 07:39:15 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/23 19:58:17 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 int	ft_print_add(unsigned long address)
 {
+	int	counter;
+
+	counter = 0;
 	ft_putstr_fd("0x", 1);
-	ft_putnbr_base(address, "0123456789abcdef");
-	return (ft_strlen("0x"));
+	counter = ft_putnbr_base(address, "0123456789abcdef");
+	return (ft_strlen("0x") + counter);
 }

@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 09:57:24 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/19 09:02:40 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/23 20:04:12 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	base_validation(char *base)
 {
-	int j;
-	int k;
-	int len_base;
+	int	j;
+	int	k;
+	int	len_base;
 
 	j = 0;
 	k = 1;
@@ -33,33 +33,33 @@ int	base_validation(char *base)
 	return (1);
 }
 
-int	operation(long int number, char *base)
+int	operation(long number, char *base)
 {
-	int	x;
-	int len_base;
+	int	counter;
+	int	len_base;
 
-	x = 0;
+	counter = 0;
 	len_base = ft_strlen(base);
 	if (number < 0)
 	{
 		ft_putchar_fd('-', 1);
 		number *= -1;
-		x++;
+		counter++;
 	}
 	if (number >= len_base)
-		x += operation(number / len_base, base);
+		counter += operation(number / len_base, base);
 	ft_putchar_fd(base[number % len_base], 1);
-	return (x + 1);
+	return (counter + 1);
 }
 
 int	ft_putnbr_base(long nbr, char *base)
 {
 	int	base_check;
-	int	x;
+	int	counter;
 
 	base_check = base_validation(base);
-	if(!base_check || !base)
+	if (!base_check || !base)
 		return (0);
-	x = operation(nbr, base);
-	return (x);
+	counter = operation(nbr, base);
+	return (counter);
 }
