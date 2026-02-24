@@ -16,7 +16,7 @@ int main(void)
 	ft_printf("\n");
 	printf("Original:------\n");
 	printf("Integer: %i\n", num);
-	printf("Address: %p\n", &num);
+	printf("Address: %p\n", &n);
 	printf("hexa: %x\n", num);
 	printf("HEXA: %X\n", num);
 	printf("char: %c\n", n);
@@ -30,11 +30,11 @@ int main(void)
 
 	ft_printf("Fake:------\n");
 	ft_printf("Integer: %i\n", num);
-	ft_printf("Address: %p\n", &num);
+	ft_printf("Address: %p\n", &n);
 	ft_printf("hexa: %x\n", num);
 	ft_printf("HEXA: %X\n", num);
 	ft_printf("char : %c\n", n);
-	ft_printf("String: %s\n", str);
+	ft_printf("String: %s\n", NULL);
 	ft_printf("Unsigned : %u\n", 2147483647);
 	ft_printf("Counter: %d\n", i);
 	ft_printf("%%%%%%\n");
