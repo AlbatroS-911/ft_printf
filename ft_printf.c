@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 09:33:20 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/24 12:28:50 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/24 21:53:05 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,11 @@ int	ft_printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%')
-			count = count + check_format(format[++i], p_arg);
+		{
+			if (!format[i + 1])
+				break;
+			count = count + check_format(format[++i], &p_arg);
+		}
 		else
 		{
 			ft_putchar_fd(format[i], 1);
@@ -55,8 +59,6 @@ int	ft_printf(const char *format, ...)
 		}
 		i++;
 	}
-	format = (char *)malloc((count + 1) * sizeof(char));
 	va_end(p_arg);
-	free((char *)format);
 	return (count);
 }
