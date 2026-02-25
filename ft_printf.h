@@ -22,6 +22,6 @@ int		ft_un_int(unsigned int num, int fd);
 int		ft_putchar_fd(char c, int fd);
 size_t	ft_strlen(const char *s);
 int		ft_putstr_fd(char *s, int fd);
-int		ft_print_add(unsigned long address);
+int		ft_print_add(void *address);
 
 #endif
