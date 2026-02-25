@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	base_validation(char *base)
+static int	base_validation(char *base)
 {
 	int	j;
 	int	k;
@@ -33,7 +33,7 @@ int	base_validation(char *base)
 	return (1);
 }
 
-int	operation(long number, char *base)
+static int	operation(long number, char *base)
 {
 	int	counter;
 	int	len_base;
