@@ -6,7 +6,7 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 09:33:20 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/24 21:53:05 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/25 14:33:03 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,25 @@ static int	check_format(char element, va_list *arg)
 	return (0);
 }
 
+static void	print(const char *format, int i, int *count, va_list *p_arg)
+{
+	while (format && format[i])
+	{
+		if (format[i] == '%')
+		{
+			if (!format[i + 1])
+				break ;
+			*count = *count + check_format(format[++i], p_arg);
+		}
+		else
+		{
+			ft_putchar_fd(format[i], 1);
+			(*count)++;
+		}
+		i++;
+	}
+}
+
 int	ft_printf(const char *format, ...)
 {
 	va_list	p_arg;
@@ -42,23 +61,9 @@ int	ft_printf(const char *format, ...)
 	i = 0;
 	count = 0;
 	if (!format)
-		return (0);
+		return (-1);
 	va_start(p_arg, format);
-	while (format[i])
-	{
-		if (format[i] == '%')
-		{
-			if (!format[i + 1])
-				break;
-			count = count + check_format(format[++i], &p_arg);
-		}
-		else
-		{
-			ft_putchar_fd(format[i], 1);
-			count++;
-		}
-		i++;
-	}
+	print(format, i, &count, &p_arg);
 	va_end(p_arg);
 	return (count);
 }

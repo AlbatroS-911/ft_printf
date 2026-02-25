@@ -3,7 +3,7 @@
 # Ft_printf
 ## DESCRIPTION
 
-***Ft_printf*** is a project within the 42 cursus recreating the behavior of the versatile function of C : **printf**. As a reminder, printf is the main of C useful to display different information on the standard output like terminator. 
+***Ft_printf*** is a project within the 42 cursus recreating the behavior of the versatile function of C : **printf**. As a reminder, printf is the main function in C useful to display different information on the standard output like terminal. 
 
 **The purpose:**
 
@@ -24,8 +24,8 @@
 
  - %c Prints a single character.
  - %s Prints a string (as defined by the common C convention).
- - %p The void * pointer argument has to be printed in hexadecimal format. 
- - % d Prints a decimal (base 10) number. 
+ - %p The void * pointer argument has to be printed in hexadecimal format.
+ - % d Prints a decimal (base 10) number.
  -  %i Prints an integer in base 10.
  - %u Prints an unsigned decimal (base 10) number. 
  - %x Prints a number in hexadecimal (base 16) lowercase format. 
@@ -35,7 +35,7 @@
 ## INSTRUCTIONS
 
 ### Clone the repository
-```git clone ```
+```git clone git@vogsphere.42antananarivo.mg:vogsphere/intra-uuid-ecfba0ff-b702-448b-8405-7981a763775b-7263287-tokrabem```
 
 ### Compilation
 To compile the function, use the provided Makefile:
@@ -75,11 +75,11 @@ What I used it for?
  - Giving me an idea on how can I proceed and build the project from scratch.
  - Offset some information judged important but I didn't figure out in the articles or tutorials.
  - Asking few tips real quick, and not more.
- - Being an emotional support when victory was not in my side. 
+ - Being an emotional support when tests did not work. 
  
  What I did not use it for?
  - Asking directly all the code that I didn't even understand.
- - Build the whole project that will be tricky for me
+ - Building the whole project that will be tricky for me
  - 
 ## CONTENT OF THE PROJECT
 ### Utils functions
@@ -96,7 +96,7 @@ What I used it for?
  ft_printf - Contain the logic as the original one
 
 ### Header 
-ft_printf.h
+ft_printf.h - Prototype all the functions and others headers useful for the project.
 
 ### Makefile
 Makefile - Compile and run the function

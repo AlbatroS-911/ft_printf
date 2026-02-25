@@ -6,15 +6,15 @@
 /*   By: tokrabem <tokrabem@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 00:58:03 by tokrabem          #+#    #+#             */
-/*   Updated: 2026/02/23 20:36:08 by tokrabem         ###   ########.fr       */
+/*   Updated: 2026/02/25 12:31:40 by tokrabem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include "stdlib.h"
-# include "stdarg.h"
-# include "unistd.h"
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdarg.h>
 
 int		ft_printf(const char *form, ...);
 int		ft_putnbr_base(long nbr, char *base);
