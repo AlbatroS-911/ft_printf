@@ -12,12 +12,12 @@
 
 #include "ft_printf.h"
 
-int	ft_print_add(unsigned long address)
+int	ft_print_add(void *address)
 {
 	int	counter;
 
 	counter = 0;
 	ft_putstr_fd("0x", 1);
-	counter = ft_putnbr_base(address, "0123456789abcdef");
+	counter = ft_putnbr_base((unsigned long)address, "0123456789abcdef");
 	return (ft_strlen("0x") + counter);
 }
