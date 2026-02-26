@@ -12,10 +12,15 @@
 
 #include "ft_printf.h"
 
-int	ft_print_add(void *address)
+int	ft_print_add(void *address, int fd)
 {
 	int	counter;
 
+	if (address == NULL)
+	{
+		counter = ft_putstr_fd("(nil)", fd);
+		return (counter);
+	}	
 	counter = 0;
 	ft_putstr_fd("0x", 1);
 	counter = ft_putnbr_base((unsigned long)address, "0123456789abcdef");
