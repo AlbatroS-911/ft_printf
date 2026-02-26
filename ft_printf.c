@@ -21,7 +21,7 @@ static int	check_format(char element, va_list *arg)
 	else if (element == 's')
 		return (ft_putstr_fd(va_arg(*arg, char *), 1));
 	else if (element == 'p')
-		return (ft_print_add(va_arg(*arg, void *)));
+		return (ft_print_add(va_arg(*arg, void *), 1));
 	else if (element == 'x')
 		return (ft_putnbr_base(va_arg(*arg, unsigned int), "0123456789abcdef"));
 	else if (element == 'X')
